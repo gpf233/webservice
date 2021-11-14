@@ -1,0 +1,16 @@
+<service name="ReservationService" scope="application">
+    <description>
+        A reservation system based on axis2.
+    </description>
+    <messageReceivers>
+        <messageReceiver 
+            mep="http://www.w3.org/ns/wsdl/in-only"
+    class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver"/>
+        <messageReceiver
+            mep="http://www.w3.org/ns/wsdl/in-out"
+    class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+    </messageReceivers>
+    <parameter name="ServiceClass">
+        edu.xidian.ictt.gpf.reservation.Service
+    </parameter>
+</service>
